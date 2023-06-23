@@ -7,6 +7,7 @@ const ScreenShot = require('./screenShot');
 const Cache = require('./cache')
 const PORT = process.env.PORT || 3000
 let baseDir
+const app = express()
 const getKey = ()=>{
   try{
     let time = Date.now()
@@ -57,18 +58,18 @@ app.get('/puppeteer', async(req, res)=>{
     res.status(500)
   }
 })
-const StartServer = (dir)=>{
+module.exports = (dir)=>{
   try{
     baseDir = dir || '/app'
+    baseDir = path.join(baseDir, 'public')
     app.use('/thumbnail', express.static(path.join(baseDir, 'thumbnail')))
     app.use('/asset', express.static(path.join(baseDir, 'asset')))
     app.use('/css', express.static(path.join(baseDir, 'css')))
     app.use('/portrait', express.static(path.join(baseDir, 'portrait')))
-    app.listen(PORT, ()=>{
+    const server = app.listen(PORT, ()=>{
       console.log('WebRender Server Listening on ', server.address().port)
     })
   }catch(e){
     console.error(e);
   }
 }
-module.exports = StartServer()

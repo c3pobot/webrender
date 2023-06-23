@@ -36,12 +36,13 @@ const minimal_args = [
   '--no-zygote',
   '--password-store=basic',
   '--use-gl=swiftshader',
-  '--use-mock-keychain',
+  '--use-mock-keychain'
 ]
 let webBrowser
 const CreateBrowser = async()=>{
   try{
     const payload = {
+      headless: 'new',
       args: minimal_args,
       defaultViewport: { width: 1000, height: 50 }
     }
