@@ -1,0 +1,248 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border: 0;
+}
+table {
+  font-family: 'Antic';
+  font-size: 16;
+}
+.stat-not-met {
+  color: #DF013A;
+}
+.stat-table {
+  width: 100%;
+  font-weight: bold;
+  padding-top: 5;
+}
+.stat-td {
+  width: 125;
+}
+.stat-table-td {
+  vertical-align: top;
+}
+.stat-title td {
+  border-bottom: 1px solid white;
+}
+.stat-title-met {
+  background: #01DF01;
+  color: black;
+}
+.title {
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+.squad-note {
+  text-align: left;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  padding-left: 20px;
+}
+.unit-image {
+  vertical-align: top;
+  width: 132px;
+}
+.unit-name {
+  text-align: center;
+  padding-bottom: 10;
+  font-weight: bold;
+}
+.unit-met {
+  border: 5px solid #01DF01;
+  border-radius:6px;
+}
+.unit-met-stats-met {
+  border: 5px solid #01DF01;
+  border-radius:6px;
+}
+.unit-met-stats-not-met {
+  border: 5px solid #ffd500;
+  border-radius:6px;
+}
+.unit-not-met {
+  border: 5px solid #DF013A;
+  border-radius:6px;
+}
+.unit-gp-not-met {
+  border: 5px solid #DF013A;
+  border-radius:6px;
+}
+.unit-not-met-stats-met {
+  border: 5px solid #ffd500;
+  border-radius:6px;
+}
+.unit-not-met-stats-not-met{
+  border: 5px solid #DF013A;
+  border-radius:6px;
+}
+.unit-stat-not-met {
+  background-color: #ffd500;
+  text-shadow: 2px 2px white;
+  color: black;
+}
+.unit-met-old {
+  background-color: #01DF01;
+  color: black;
+  text-shadow: 2px 2px white;
+}
+.unit-not-met-old {
+  background-color: #DF013A;
+  color: #ffd500;
+  text-shadow: 2px 2px black;
+}
+.footer-text {
+	text-align: center;
+	font-size: 15px;
+}
+.requirement-met {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #01DF01 transparent transparent;
+  left: 47;
+  top: -120;
+  position: relative;
+}
+.requirement-met-stats-met {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #01DF01 transparent transparent;
+  left: 47;
+  top: -120;
+  position: relative;
+}
+.requirement-met-stats-not-met {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #ffd500 transparent transparent;
+  left: 47;
+  top: -120;
+  position: relative;
+}
+.requirement-not-met {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #DF013A transparent transparent;
+  left: 47;
+  top: -120;
+  position: relative;
+}
+.requirement-not-met-stats-met {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #ffd500 transparent transparent;
+  left: 47;
+  top: -120;
+  position: relative;
+}
+.requirement-not-met-stats-not-met {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #DF013A transparent transparent;
+  left: 47;
+  top: -120;
+  position: relative;
+}
+.requirement-text {
+  text-align: left;
+  margin: 0px;
+  left: 35;
+  color: black;
+  font-weight: bold;
+  position: relative;
+}
+.requirement-gp {
+  right: 0;
+  bottom: 0;
+  position: relative;
+  text-align: center;
+}
+.requirement-met-ship {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #01DF01 transparent transparent;
+  left: 47;
+  top: -106;
+  position: relative;
+}
+.requirement-met-ship-stats-not-met {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #ffd500 transparent transparent;
+  left: 47;
+  top: -106;
+  position: relative;
+}
+.requirement-met-ship-stats-met {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #01DF01 transparent transparent;
+  left: 47;
+  top: -106;
+  position: relative;
+}
+.requirement-not-met-ship {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #DF013A transparent transparent;
+  left: 47;
+  top: -106;
+  position: relative;
+}
+.requirement-not-met-ship-stats-met {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #ffd500 transparent transparent;
+  left: 47;
+  top: -106;
+  position: relative;
+}
+.requirement-not-met-ship-stats-not-met {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 60px 60px 0;
+  border-color: transparent #DF013A transparent transparent;
+  left: 47;
+  top: -106;
+  position: relative;
+}

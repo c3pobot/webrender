@@ -1,0 +1,28 @@
+p {
+		color:white;
+		font-family:sans-serif;
+}
+div {
+			color:white;
+			font-family:sans-serif ;
+}
+.review{
+	color:white;
+	font-family:sans-serif;
+	font-size:50px
+}
+.title {
+  background-image: url(/asset/stats-title-bg.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.ltbg {
+  background-image: url(/asset/stats-lt-bg.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.dkbg {
+  background-image: url(/asset/stats-dk-bg.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+}

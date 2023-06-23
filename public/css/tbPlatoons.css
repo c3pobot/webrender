@@ -1,0 +1,31 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-spacing: 1;
+}
+.platoon {
+  background-color: white;
+  color: black;
+}
+.squad {
+  background-color: gray;
+}
+.row-even {
+  background-color: grey;
+}
+.no-player {
+  width: 33%;
+  background-color: #e90e0e;
+  color: white;
+  font-weight: bolder;
+}
+.player {
+  width: 33%;
+  background-color: #91d4ff;
+  color: black;
+  font-weight: bolder;
+}

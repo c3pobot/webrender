@@ -1,0 +1,44 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.title {
+  background-color: black;
+  text-align: center;
+  color:  white;
+}
+.bk-odd {
+  background-image: url(/asset/stats-lt-bg.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.bk-even {
+  background-image: url(/asset/stats-dk-bg.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.bk-low {
+  background-color: red;
+}
+.reward-chest {
+  width: 80px;
+  height: 80px;
+}
+.progess-bar {
+  background: #555;
+  border: 1px solid #ccc;
+  width: 600px;
+  height: 20px;
+  margin-top: -1px;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
+  display: flex;
+  justify-content: flex-start;
+}
+.progess-bar-fill {
+  height: 20px;
+  border-radius: 6px 6px 6px 6px;
+  background-color: #2E8B57;
+}

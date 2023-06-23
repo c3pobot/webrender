@@ -1,0 +1,52 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: 0px;
+  border: 0px;
+}
+table {
+  font-family: 'Antic';
+  font-size: 16;
+  border-spacing: 0;
+  text-shadow: 3px 3px black;
+}
+.player-name {
+	background-image: url(/asset/stats-title-bg.png);
+	color: white;
+	text-align: center;
+	vertical-align: top;
+}
+.stat-table {
+  width: 140px;
+  font-weight: bold;
+}
+.unit-even {
+  background-image: url(/asset/stats-lt-bg.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.unit-odd {
+  background-image: url(/asset/stats-dk-bg.png);
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+.unit-name {
+  text-align: center;
+  padding-bottom: 10;
+
+}
+/*
+.unit-stats {
+  padding-left: 25px;
+}
+*/
+.footer-text {
+	text-align: center;
+	font-size: 15px;
+}
