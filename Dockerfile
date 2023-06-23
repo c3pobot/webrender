@@ -15,7 +15,7 @@ RUN apk add --no-cache \
       ttf-freefont
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
-RUN mkdir -p /app/cache; mkdir -p /app/thumbnail; mkdir -p /app/asset; mkdir -p /app/portrait; mkdir -p /app/css; mkdir -p /app/node_modules && chown -R node:node /app
+RUN mkdir -p /app/asset; mkdir -p /app/cache; mkdir -p /app/css; mkdir -p /app/portrait; mkdir -p /app/thumbnail; mkdir -p /app/node_modules && chown -R node:node /app
 WORKDIR /app
 
 COPY --from=builder node_modules node_modules/
