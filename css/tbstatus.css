@@ -1,0 +1,26 @@
+body {
+  background-color: black;
+	font-family: 'Antic';
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+.review{
+	color: white;
+	font-size: 50px
+}
+.title {
+	background-color: black;
+	color: white;
+	font-weight: bolder;
+}
+.ltbg {
+	background-color: a9a9a9;
+	color: black;
+
+}
+.dkbg {
+  background-color: gray;
+	color: black;
+	font-weight: bold;
+}

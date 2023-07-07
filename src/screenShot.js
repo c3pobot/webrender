@@ -66,6 +66,6 @@ module.exports = async(uri, browserWidth = 800, resizeImg = false)=>{
       return data
     }
   }catch(e){
-    console.error(e);
+    throw(e);
   }
 }
