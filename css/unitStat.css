@@ -1,0 +1,590 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border: 0px;
+}
+table {
+  text-align: center;
+  font-family: 'Antic';
+  font-size:35;
+  border-spacing: 0;
+  font-weight: bold;
+  text-shadow: 3px 3px gray;
+}
+.footer-text {
+  height: 30;
+	font-size: 20;
+  text-shadow: 3px 3px black;
+}
+.unit-name {
+  background-color: black;
+  text-shadow: 3px 3px gray;
+  vertical-align: top;
+  height: 60;
+}
+.stat-title {
+  background-color: black;
+	color: white;
+	font-weight: bolder;
+}
+.stat-even {
+  background-color: #A9A9A9;
+  text-shadow: 3px 3px #778899;
+	color: black;
+  height: 40;
+}
+.stat-odd {
+  background-color: gray;
+  text-shadow: 3px 3px #778899;
+	color: black;
+  height: 40;
+}
+.modsPrimary{
+	font-size:28;
+  text-shadow: 3px 3px #778899;
+}
+.modsSecondary{
+	font-size:28;
+  text-shadow: 3px 3px #778899;
+}
+.stat-left {
+  padding: 5;
+  vertical-align: top;
+  text-align: right;
+  width: 300;
+}
+.stat-right {
+  padding: 5;
+  vertical-align: top;
+  text-align: left;
+  width: 300;
+}
+.mod-image {
+  color: black;
+  text-shadow: 3px 3px #A9A9A9;
+  padding: 5;
+  text-align: left;
+}
+.modsPanel {
+
+  background-color: gray;
+}
+.unit-extra {
+  background-image: url(/asset/zeta-overlay-flip.png);
+
+  background-repeat:no-repeat;
+  background-size:cover;
+  vertical-align: bottom;
+}
+.unit-gear {
+  width: 33%;
+  padding: 5;
+  text-align: right;
+}
+
+.unit-image {
+  background-color: black;
+}
+.unit-image-inner {
+  border-spacing: 1;
+}
+.unit-level {
+  text-align: left;
+  padding: 5;
+  width: 33%;
+  color:gold;
+}
+.unit-portrait {
+  background-repeat:no-repeat;
+  background-position:top;
+  background-size:cover;
+  vertical-align: top;
+  height: 750;
+  width: 750;
+}
+.unit-zeta {
+  padding-top: 5;
+  padding-left: 5;
+  height: 40;
+  text-align: left;
+}
+.mod-icon {
+  background: url(/asset/mod-icon-atlas.png) no-repeat;
+  width: 31;
+  height: 31;
+  zoom: 0.8;
+  position: relative;
+}
+
+.icon-1-1 {
+  background-position: -1px -1px;
+}
+
+.icon-1-2 {
+  background-position: -1px -33px;
+}
+
+.icon-1-3 {
+  background-position: -1px -65px;
+}
+
+.icon-1-4 {
+  background-position: -1px -97px;
+}
+
+.icon-1-5 {
+  background-position: -1px -129px;
+}
+
+/* Offense Mod Sets */
+.icon-2-1 {
+  background-position: -33px -1px;
+}
+
+.icon-2-2 {
+  background-position: -33px -33px;
+}
+
+.icon-2-3 {
+  background-position: -33px -65px;
+}
+
+.icon-2-4 {
+  background-position: -33px -97px;
+}
+
+.icon-2-5 {
+  background-position: -33px -129px;
+}
+
+/* Defense Mod Sets */
+.icon-3-1 {
+  background-position: -65px -1px;
+}
+
+.icon-3-2 {
+  background-position: -65px -33px;
+}
+
+.icon-3-3 {
+  background-position: -65px -65px;
+}
+
+.icon-3-4 {
+  background-position: -65px -97px;
+}
+
+.icon-3-5 {
+  background-position: -65px -129px;
+}
+
+/* Speed */
+.icon-4-1 {
+  background-position: -97px -1px;
+}
+
+.icon-4-2 {
+  background-position: -97px -33px;
+}
+
+.icon-4-3 {
+  background-position: -97px -65px;
+}
+
+.icon-4-4 {
+  background-position: -97px -97px;
+}
+
+.icon-4-5 {
+  background-position: -97px -129px;
+}
+
+/* CC */
+.icon-5-1 {
+  background-position: -129px -1px;
+}
+
+.icon-5-2 {
+  background-position: -129px -33px;
+}
+
+.icon-5-3 {
+  background-position: -129px -65px;
+}
+
+.icon-5-4 {
+  background-position: -129px -97px;
+}
+
+.icon-5-5 {
+  background-position: -129px -129px;
+}
+
+/*CD */
+.icon-6-1 {
+  background-position: -161px -1px;
+}
+
+.icon-6-2 {
+  background-position: -161px -33px;
+}
+
+.icon-6-3 {
+  background-position: -161px -65px;
+}
+
+.icon-6-4 {
+  background-position: -161px -97px;
+}
+
+.icon-6-5 {
+  background-position: -161px -129px;
+}
+
+.icon-7-1 {
+  background-position: -193px -1px;
+}
+
+.icon-7-2 {
+  background-position: -193px -33px;
+}
+
+.icon-7-3 {
+  background-position: -193px -65px;
+}
+
+.icon-7-4 {
+  background-position: -193px -97px;
+}
+
+.icon-7-5 {
+  background-position: -193px -129px;
+}
+
+.icon-8-1 {
+  background-position: -225px -1px;
+}
+
+.icon-8-2 {
+  background-position: -225px -33px;
+}
+
+.icon-8-3 {
+  background-position: -225px -65px;
+}
+
+.icon-8-4 {
+  background-position: -225px -97px;
+}
+
+.icon-8-5 {
+  background-position: -225px -129px;
+}
+.pos-1-align-speed{
+	left: 45;
+	top: 26;
+}
+.pos-1-align{
+	left: 45;
+	top: 26;
+}
+.pos-2-align-speed{
+	left: 50;
+	top: 21;
+}
+.pos-2-align{
+	left: 52;
+	top: 21;
+}
+.pos-3-align-speed{
+	left: 35;
+	top: 35;
+}
+.pos-3-align{
+	left: 36;
+	top: 35;
+}
+.pos-4-align-speed{
+	left: 34;
+	top: 42;
+}
+.pos-4-align{
+	left: 36;
+	top: 42;
+}
+.pos-5-align-speed{
+	left: 35;
+	top: 36;
+}
+.pos-5-align{
+	left: 36;
+	top: 36;
+}
+.pos-6-align-speed{
+  left: 34;
+	top: 36;
+}
+.pos-6-align{
+  left: 35;
+	top: 36;
+}
+.mod-shape {
+  background: url(/asset/mod-shape-atlas.png) no-repeat;
+  width: 82px;
+  height: 82px;
+}
+
+.shape-5-1-1 {
+  background-position: -5px -4px;
+}
+
+.shape-5-1-2 {
+  background-position: -5px -94px;
+}
+
+.shape-5-1-3 {
+  background-position: -5px -184px;
+}
+
+.shape-5-1-4 {
+  background-position: -5px -274px;
+}
+
+.shape-5-1-5 {
+  background-position: -5px -364px;
+}
+
+/*5 pip arrow */
+.shape-5-2-1 {
+  background-position: -93px -4px;
+}
+
+.shape-5-2-2 {
+  background-position: -93px -94px;
+}
+
+.shape-5-2-3 {
+  background-position: -93px -184px;
+}
+
+.shape-5-2-4 {
+  background-position: -93px -274px;
+}
+
+.shape-5-2-5 {
+  background-position: -93px -364px;
+}
+
+/*5 pip diamond*/
+.shape-5-3-1 {
+  background-position: -184px -4px;
+}
+
+.shape-5-3-2 {
+  background-position: -184px -94px;
+}
+
+.shape-5-3-3 {
+  background-position: -184px -184px;
+}
+
+.shape-5-3-4 {
+  background-position: -184px -274px;
+}
+
+.shape-5-3-5 {
+  background-position: -184px -364px;
+}
+
+/* 5 pip triangle */
+.shape-5-4-1 {
+  background-position: -274px -4px;
+}
+
+.shape-5-4-2 {
+  background-position: -274px -94px;
+}
+
+.shape-5-4-3 {
+  background-position: -274px -184px;
+}
+
+.shape-5-4-4 {
+  background-position: -274px -274px;
+}
+
+.shape-5-4-5 {
+  background-position: -274px -364px;
+}
+
+/*5 pip ci */
+.shape-5-5-1 {
+  background-position: -364px -4px;
+}
+
+.shape-5-5-2 {
+  background-position: -364px -94px;
+}
+
+.shape-5-5-3 {
+  background-position: -364px -184px;
+}
+
+.shape-5-5-4 {
+  background-position: -364px -274px;
+}
+
+.shape-5-5-5 {
+  background-position: -364px -364px;
+}
+
+/*5 pip cross*/
+.shape-5-6-1 {
+  background-position: -455px -4px;
+}
+
+.shape-5-6-2 {
+  background-position: -455px -94px;
+}
+
+.shape-5-6-3 {
+  background-position: -455px -184px;
+}
+
+.shape-5-6-4 {
+  background-position: -455px -274px;
+}
+
+.shape-5-6-5 {
+  background-position: -455px -364px;
+}
+
+/*6 pip square */
+.shape-6-1-1 {
+  background-position: -545px -4px;
+}
+
+.shape-6-1-2 {
+  background-position: -545px -94px;
+}
+
+.shape-6-1-3 {
+  background-position: -545px -184px;
+}
+
+.shape-6-1-4 {
+  background-position: -545px -274px;
+}
+
+.shape-6-1-5 {
+  background-position: -545px -364px;
+}
+
+/*6 pip arrow*/
+.shape-6-2-1 {
+  background-position: -633px -4px;
+}
+
+.shape-6-2-2 {
+  background-position: -633px -94px;
+}
+
+.shape-6-2-3 {
+  background-position: -633px -184px;
+}
+
+.shape-6-2-4 {
+  background-position: -633px -274px;
+}
+
+.shape-6-2-5 {
+  background-position: -633px -364px;
+}
+
+/*6 pip diamond*/
+.shape-6-3-1 {
+  background-position: -724px -4px;
+}
+
+.shape-6-3-2 {
+  background-position: -724px -94px;
+}
+
+.shape-6-3-3 {
+  background-position: -724px -184px;
+}
+
+.shape-6-3-4 {
+  background-position: -724px -274px;
+}
+
+.shape-6-3-5 {
+  background-position: -724px -364px;
+}
+
+/*6 pip triangle */
+.shape-6-4-1 {
+  background-position: -814px -4px;
+}
+
+.shape-6-4-2 {
+  background-position: -814px -94px;
+}
+
+.shape-6-4-3 {
+  background-position: -814px -184px;
+}
+
+.shape-6-4-4 {
+  background-position: -814px -274px;
+}
+
+.shape-6-4-5 {
+  background-position: -814px -364px;
+}
+
+/*6 pip ci */
+.shape-6-5-1 {
+  background-position: -904px -4px;
+}
+
+.shape-6-5-2 {
+  background-position: -904px -94px;
+}
+
+.shape-6-5-3 {
+  background-position: -904px -184px;
+}
+
+.shape-6-5-4 {
+  background-position: -904px -274px;
+}
+
+.shape-6-5-5 {
+  background-position: -904px -364px;
+}
+
+/*6 pip cross*/
+.shape-6-6-1 {
+  background-position: -995px -4px;
+}
+
+.shape-6-6-2 {
+  background-position: -995px -94px;
+}
+
+.shape-6-6-3 {
+  background-position: -995px -184px;
+}
+
+.shape-6-6-4 {
+  background-position: -995px -274px;
+}
+
+.shape-6-6-5 {
+  background-position: -995px -364px;
+}
