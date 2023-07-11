@@ -5,7 +5,8 @@ body {
   padding: 0;
 }
 table, td {
-  border: 0px;
+  border-spacing: 0px;
+  padding: 0px;
 }
 table {
   text-align: center;
@@ -13,7 +14,7 @@ table {
   font-size:35;
   border-spacing: 0;
   font-weight: bold;
-  text-shadow: 3px 3px gray;
+  text-shadow: 3px 3px #778899;
 }
 .footer-text {
   height: 30;
@@ -21,35 +22,36 @@ table {
   text-shadow: 3px 3px black;
 }
 .unit-name {
-  background-color: black;
-  text-shadow: 3px 3px gray;
-  vertical-align: top;
+  background-color: #696969;
+  color: black;
+  vertical-align: center;
   height: 60;
 }
 .stat-title {
-  background-color: black;
-	color: white;
-	font-weight: bolder;
+  background-color: #696969;
+	color: black;
+  height: 60;
+}
+.stat-title-compare {
+  background-color: #696969;
+  text-align: left;
+	color: black;
+  height: 60;
 }
 .stat-even {
   background-color: #A9A9A9;
-  text-shadow: 3px 3px #778899;
 	color: black;
   height: 40;
 }
 .stat-odd {
   background-color: gray;
-  text-shadow: 3px 3px #778899;
+  text-shadow: 3px 3px #696969;
 	color: black;
   height: 40;
 }
-.modsPrimary{
-	font-size:28;
-  text-shadow: 3px 3px #778899;
-}
-.modsSecondary{
-	font-size:28;
-  text-shadow: 3px 3px #778899;
+.unit-stat {
+  text-align: left;
+  padding: 5;
 }
 .stat-left {
   padding: 5;
@@ -64,20 +66,35 @@ table {
   width: 300;
 }
 .mod-image {
-  color: black;
-  text-shadow: 3px 3px #A9A9A9;
   padding: 5;
-  text-align: left;
+  width: 16.6%;
 }
 .modsPanel {
-
+  color: black;
   background-color: gray;
+  text-align: left;
+  width: 100%;
+
+}
+.td-stats {
+  background-color: #696969;
+
+}
+.stats-table{
+  width: 750px;
+}
+.mod-stat{
+  text-shadow: 4px 4px #696969;
+}
+.mod-primaryStat{
+}
+.mod-secondaryStat {
+
 }
 .unit-extra {
-  background-image: url(/asset/zeta-overlay-flip.png);
-
-  background-repeat:no-repeat;
-  background-size:cover;
+  background: rgba(169,169,169,.3);
+  width: 100%;
+	color: black;
   vertical-align: bottom;
 }
 .unit-gear {
@@ -88,6 +105,8 @@ table {
 
 .unit-image {
   background-color: black;
+  padding: 0px;
+  border: 0px;
 }
 .unit-image-inner {
   border-spacing: 1;
@@ -103,14 +122,29 @@ table {
   background-position:top;
   background-size:cover;
   vertical-align: top;
-  height: 750;
-  width: 750;
+  padding: 0px;
+  border-spacing: 0;
+  height: 900;
+  width: 900;
+}
+.unit-portrait-compare {
+  background-repeat:no-repeat;
+  background-position:top;
+  background-size:cover;
+  vertical-align: top;
+  height: 1000;
+  width: 1000;
 }
 .unit-zeta {
   padding-top: 5;
   padding-left: 5;
   height: 40;
   text-align: left;
+}
+.mod-shape {
+  background: url(/asset/mod-shape-atlas.png) no-repeat;
+  width: 82px;
+  height: 82px;
 }
 .mod-icon {
   background: url(/asset/mod-icon-atlas.png) no-repeat;
@@ -331,11 +365,6 @@ table {
 .pos-6-align{
   left: 35;
 	top: 36;
-}
-.mod-shape {
-  background: url(/asset/mod-shape-atlas.png) no-repeat;
-  width: 82px;
-  height: 82px;
 }
 
 .shape-5-1-1 {

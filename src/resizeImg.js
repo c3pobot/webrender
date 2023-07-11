@@ -1,7 +1,7 @@
 'use strict'
 const sharp = require('sharp');
 module.exports = (img)=>{
-  return new Promise(async(resolve)=>{
+  return new Promise(async(resolve, reject)=>{
     try{
       let image = await sharp(img)
       image
@@ -11,8 +11,7 @@ module.exports = (img)=>{
             resolve(image.toBuffer())
           })
     }catch(e){
-      console.error(e)
-      resolve()
+      reject(e)
     }
   })
 }

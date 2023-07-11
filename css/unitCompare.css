@@ -1,0 +1,75 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border: 0px;
+}
+table {
+  text-align: center;
+  font-family: 'Antic';
+  font-size:35;
+  border-spacing: 0;
+  font-weight: bold;
+  text-shadow: 3px 3px gray;
+}
+.footer-text {
+  height: 30;
+	font-size: 20;
+  text-shadow: 3px 3px black;
+}
+.stat-title {
+  background-color: #696969;
+  text-shadow: 3px 3px #778899;
+	color: black;
+  text-align: left;
+  height: 60;
+}
+.stat-even {
+  background-color: #A9A9A9;
+  text-shadow: 3px 3px #778899;
+	color: black;
+  height: 40;
+}
+.stat-odd {
+  background-color: gray;
+  text-shadow: 3px 3px #778899;
+	color: black;
+  height: 40;
+}
+.unit-image {
+  background-color: black;
+}
+.unit-portrait-compare {
+  background-repeat:no-repeat;
+  background-position:top;
+  background-size:cover;
+  vertical-align: top;
+  height: 1000;
+  width: 1000;
+}
+.unit-name {
+  background-color: #696969;
+  color: black;
+  text-shadow: 3px 3px #778899;
+  vertical-align: center;
+  height: 60;
+}
+.unit-extra {
+  background: rgba(169,169,169,.4);
+  text-shadow: 3px 3px #778899;
+	color: black;
+  vertical-align: bottom;
+}
+.unit-stat {
+  text-align: left;
+  padding: 5;
+}
+.unit-zeta {
+  padding-top: 5;
+  padding-left: 5;
+  height: 40;
+  text-align: left;
+}

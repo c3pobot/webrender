@@ -1,4 +1,5 @@
 'use strict'
+const log = require('./logger')
 const puppeteer = require('puppeteer')
 const ResizeImg = require('./resizeImg')
 const minimal_args = [
@@ -49,7 +50,7 @@ const CreateBrowser = async()=>{
     if(process.env.PUPPETEER_DATA_DIR) payload.userDataDir = process.env.PUPPETEER_DATA_DIR
     webBrowser = await puppeteer.launch(payload)
   }catch(e){
-    console.error(e);
+    log.error(e);
   }
 }
 CreateBrowser()
@@ -61,7 +62,7 @@ module.exports = async(uri, browserWidth = 800, resizeImg = false)=>{
       await page.setViewport({ width: browserWidth, height: 50 })
       await page.goto(uri, { waitUntil: 'networkidle0' })
       let data = await page.screenshot({ fullPage: true, omitBackground: true})
-      await page.close()
+      page.close()
       if(data && !data.status && resizeImg) data = await ResizeImg(data)
       return data
     }

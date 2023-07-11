@@ -1,4 +1,7 @@
 'use strict'
+const log = require('./logger')
+let logLevel = process.env.LOG_LEVEL || log.Level.INFO;
+log.setLevel(logLevel);
 const path = require('path')
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -13,7 +16,7 @@ const getKey = ()=>{
     let time = Date.now()
     return 'w-'+time
   }catch(e){
-    console.error(e);
+    log.error(e);
   }
 }
 app.use(bodyParser.json({
@@ -43,7 +46,7 @@ const handlePuppeteerRequest = async(req, res)=>{
       res.sendStatus(400)
     }
   }catch(e){
-    console.error(e);
+    log.error(e);
     res.sendStatus(400)
   }
 }
@@ -65,10 +68,10 @@ const handleWebRequest = async(req, res)=>{
       res.status(400).json({status: 400, message: 'error getting image'})
     }
   }catch(e){
-    console.error(e);
+    log.error(e);
     res.send(400).json({message: 'Error occured'})
   }
 }
 const server = app.listen(PORT, ()=>{
-  console.log('WebRender Server Listening on '+server.address().port)
+  log.info('WebRender Server Listening on '+server.address().port)
 })
