@@ -1,0 +1,67 @@
+body {
+  background-color: black;
+	font-family: 'Antic';
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border-spacing: 0px;
+  padding: 0px;
+}
+table {
+  text-align: center;
+  color: black;
+  font-family: 'Antic';
+  font-size:35;
+  border-spacing: 0;
+  font-weight: bold;
+  text-shadow: 3px 3px #778899;
+}
+.collection-char{
+  font-size: 16;
+}
+.collection-char-name{
+  font-size: 20;
+}
+.footer-text{
+  color: white;
+  font-size: 20px;
+}
+.title {
+  text-align: center;
+  color: white;
+}
+.main-table{
+  width: 900px;
+  color: black;
+}
+.player-note{
+  background-color: #A9A9A9;
+  color: black;
+  font-size: 20;
+}
+.zone-title {
+  background-color: #696969;
+}
+.zone-unit-even {
+	background-color: #A9A9A9;
+
+}
+.zone-unit-odd {
+  background-color: gray;
+}
+.zone-unit-image{
+  width: 150px;
+  vertical-align: top;
+}
+.zone-units-table{
+  width: 100%;
+}
+.zone-unit-players-table{
+  padding-left: 20px;
+}
+.zone-unit-player-td{
+  text-align: left;
+  font-size: 30px
+}

@@ -6,10 +6,16 @@ const path = require('path')
 const express = require('express');
 const bodyParser = require('body-parser');
 const compression = require('compression');
+const { createProxyMiddleware } = require('http-proxy-middleware')
 const ScreenShot = require('./screenShot');
 const Cache = require('./cache')
 const PORT = process.env.PORT || 3000
-
+const S3_PUBLIC_URL = process.env.S3_PUBLIC_URL
+let imgProxy
+if(S3_PUBLIC_URL) imgProxy = createProxyMiddleware({
+  target: S3_PUBLIC_URL,
+  secure: false
+})
 const app = express()
 const getKey = ()=>{
   try{
@@ -26,10 +32,13 @@ app.use(bodyParser.json({
   }
 }))
 app.use(compression())
-app.use('/thumbnail', express.static(path.join(baseDir, 'public', 'thumbnail')))
-app.use('/asset', express.static(path.join(baseDir, 'public', 'asset')))
+//app.use('/thumbnail', express.static(path.join(baseDir, 'public', 'thumbnail')))
 app.use('/css', express.static(path.join(baseDir, 'css')))
-app.use('/portrait', express.static(path.join(baseDir, 'public', 'portrait')))
+if(imgProxy){
+  app.use('/asset', imgProxy)
+  app.use('/portrait', imgProxy)
+  app.use('/thumbnail', imgProxy)
+}
 
 app.post('/web', (req, res)=>{
   handleWebRequest(req, res)
