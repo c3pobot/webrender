@@ -1,0 +1,49 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border: 0px;
+  padding: 0px;
+}
+table {
+  text-align: center;
+  font-family: 'Antic';
+  font-size: 20px;;
+  border-spacing: 0;
+  font-weight: bold;
+  text-shadow: 3px 3px #778899;
+}
+.main-table {
+  width: 500px;
+}
+.unit-time {
+  width: 150px;
+}
+.unit-stamina {
+  width: 90px;
+}
+.footer {
+  font-size: 15px;
+  text-shadow: 3px 3px black;
+}
+.main-title {
+  background-color: #808080;
+  color: black;
+  font-size: 25px;
+}
+.title {
+  background-color: #696969;
+	color: black;
+}
+.row-even {
+  background-color: #A9A9A9;
+  color: black;
+}
+.row-odd {
+  background-color: gray;
+  text-shadow: 3px 3px #696969;
+	color: black;
+}

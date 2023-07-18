@@ -1,0 +1,82 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border: 0px;
+  padding: 0px;
+}
+table {
+  text-align: center;
+  font-family: 'Antic';
+  font-size: 14;
+  border-spacing: 0;
+  font-weight: bold;
+  text-shadow: 3px 3px #778899;
+}
+.main-table {
+  width: 850px;
+}
+.footer {
+  text-shadow: 3px 3px black;
+}
+.disc-img {
+  position: relative;
+  width: 60px;
+  padding-left: 10px;
+}
+.disc-tier {
+  position: relative;
+  top: 0;
+}
+.disc-emblem {
+  position: absolute;
+  top: 0;
+}
+.disc-power {
+  position: absolute;
+  top: 0;
+}
+.disc-src {
+  width: 60px;
+  height: 76px;
+}
+.main-title {
+  background-color: #808080;
+  color: black;
+  font-size: 25px;
+}
+.title {
+  background-color: #696969;
+	color: black;
+  font-size: 20px;
+  height: 30px;
+}
+.pic-td {
+  width: 80px;
+}
+.desc-td {
+  padding-right: 10px;
+}
+.disc-table {
+  color: black;
+  width: 100%;
+}
+.disc-name {
+  text-align: left;
+  font-weight: bold;
+}
+.disc-desc {
+  text-align: left;
+}
+.row-even {
+  background-color: #A9A9A9;
+  color: black;
+}
+.row-odd {
+  background-color: gray;
+  text-shadow: 3px 3px #696969;
+	color: black;
+}

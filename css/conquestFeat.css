@@ -1,0 +1,74 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border: 0px;
+  padding: 0px;
+}
+table {
+  text-align: center;
+  font-family: 'Antic';
+  font-size: 14;
+  border-spacing: 0;
+  font-weight: bold;
+  text-shadow: 3px 3px #778899;
+}
+.main-table {
+  width: 1200px;
+
+}
+.main-title {
+  background-color: #808080;
+  color: black;
+  font-size: 20px;
+}
+.footer {
+  text-shadow: 3px 3px black;
+}
+.feat-sector{
+  width: 40px;
+}
+.feat-desc {
+  text-align: left;
+}
+.feat-status {
+  width: 80px;
+}
+.feat-reward {
+  width: 50px;
+}
+.crate-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50;
+  height: 50;
+}
+.currency {
+  height: 25;
+  width: 25;
+}
+.status {
+  background-color: #A9A9A9;
+  color: black;
+}
+.status-td {
+  text-align: left;
+  vertical-align: middle;
+}
+.title {
+  background-color: #696969;
+	color: black;
+}
+.row-even {
+  background-color: #A9A9A9;
+  color: black;
+}
+.row-odd {
+  background-color: gray;
+  text-shadow: 3px 3px #696969;
+	color: black;
+}
