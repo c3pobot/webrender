@@ -4,23 +4,81 @@ body {
   margin: 0;
   padding: 0;
 }
-.title {
-  background-color: black;
+table, td {
+  border-spacing: 0px;
+  padding: 0px;
+}
+table {
   text-align: center;
-  color:  white;
+  font-family: 'Antic';
+  font-size:20;
+  border-spacing: 0;
+  font-weight: bold;
+  text-shadow: 3px 3px #778899;
+}
+.main-table {
+  width: 850px;
+}
+
+.title {
+  background-color: #808080;
+  color: black;
+  font-size: 30px;
+  height: 60px;
+}
+.player-title {
+  background-color: #696969;
+	color: black;
+  font-size: 25px;
+}
+.player-name {
+
+}
+.player-current {
+
+}
+.player-last {
+
+}
+.reward-table {
+  width: 100%;
+  background-color: #696969;
+	color: black;
+}
+.rewart-current {
+
+}
+.reward-progress {
+
+}
+.reward-next {
+
+}
+.reward-current-score {
+
+}
+.reward-next-score {
+
+}
+.current-score {
+  text-align: center;
+}
+.footer {
+  text-shadow: 3px 3px black;
 }
 .bk-odd {
-  background-image: url(/asset/stats-lt-bg.png);
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-color: gray;
+  text-shadow: 3px 3px #696969;
+	color: black;
 }
 .bk-even {
-  background-image: url(/asset/stats-dk-bg.png);
-  background-repeat:no-repeat;
-  background-size:cover;
+  background-color: #A9A9A9;
+  color: black;
 }
 .bk-low {
   background-color: red;
+  color: white;
+  text-shadow: 3px 3px black;
 }
 .reward-chest {
   width: 80px;
