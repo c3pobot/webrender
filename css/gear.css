@@ -14,39 +14,7 @@ table {
   font-size:20;
   border-spacing: 0;
 }
-.gear-image {
-  width: 50px;
-  padding: 5
-}
-.gear-name {
-  padding-left: 10px;
-  text-align: left;
-  text-shadow: 3px 3px black;
-  width: 400px;
-}
-.gear-even {
-  background-image: url(/asset/stats-dk-bg.png);
-  background-repeat:no-repeat;
-  background-size:cover;
-}
-.gear-odd {
-  background-image: url(/asset/stats-lt-bg.png);
-  background-repeat:no-repeat;
-  background-size:cover;
-}
-.header-text {
-  background-image: url(/asset/stats-title-bg.png);
-  background-repeat:no-repeat;
-  background-size:cover;
-  text-align: center;
-  font-size: 20px;
-  color: white;
-  text-shadow: 3px 3px black;
-}
-.footer-text {
-	text-align: center;
-	font-size: 15px;
-}
+
 .pull-left {
   float: left !important
 }
