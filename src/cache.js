@@ -1,5 +1,5 @@
 'use strict'
-const log = require('./logger')
+const log = require('logger')
 const Cache = require('node-cache')
 const HTMLCache = new Cache({stdTTL: 60, checkperiod: 60})
 module.exports.set = async(key, value)=>{
