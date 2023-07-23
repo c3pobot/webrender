@@ -1,0 +1,55 @@
+body {
+  background-color: black;
+	font-family: 'Antic';
+  color: white;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-shadow: 3px 3px #778899;
+}
+table, td {
+  border: 0px;
+  padding: 0px;
+  border-spacing: 0;
+  font-weight: bold;
+}
+.main-table {
+  width: 1000px;
+}
+.main-header {
+  background-color: #696969;
+  color: black;
+  font-size: 25px;
+}
+.stat-name {
+
+}
+.section-title {
+  text-align: center;
+  background-color: #696969;
+  font-size: 25px;
+  color: black;
+}
+.stat-title {
+  background-color: #778899;
+  text-shadow: 3px 3px #696969;
+  color: black;
+  font-size: 18px;
+}
+.home-guild {
+  text-align: center;
+  width: 370px;
+}
+.away-guild {
+  text-align: center;
+  width: 370px;
+}
+.row-even {
+  background-color: #A9A9A9;
+  color: black;
+}
+.row-odd {
+  background-color: #808080;
+
+	color: black;
+}
