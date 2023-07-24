@@ -14,7 +14,10 @@ table, td {
   font-weight: bold;
 }
 .main-table {
-  width: 1000px;
+  width: 450px;
+}
+.units-table {
+  width: 500px;
 }
 .main-header {
   background-color: #696969;
@@ -38,11 +41,11 @@ table, td {
 }
 .home-guild {
   text-align: center;
-  width: 370px;
+  width: 150px;
 }
 .away-guild {
   text-align: center;
-  width: 370px;
+  width: 150px;
 }
 .row-even {
   background-color: #A9A9A9;

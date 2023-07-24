@@ -1,0 +1,65 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border: 0px;
+  padding: 0px;
+}
+table {
+  text-align: center;
+  font-family: 'Antic';
+  font-size: 14;
+  border-spacing: 0;
+  font-weight: bold;
+}
+.main-table {
+
+}
+.header-text {
+  background-color: #808080;
+
+}
+.unit-text {
+  background-color: #808080;
+  color: black;
+}
+.guild-text {
+  padding-left: 30px;
+  text-align: left;
+  vertical-align: center;
+  color: black;
+  font-size: 20px;
+}
+.row-even {
+  background-color: #A9A9A9;
+  color: black;
+}
+.row-odd {
+  background-color: gray;
+	color: black;
+}
+.unit-name {
+  width: 100px;
+}
+.unit-rarity {
+  width: 35px;
+}
+.unit-gp {
+  width: 50px;
+}
+.unit-gear {
+  width: 70px;
+}
+.unit-skill {
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 100px;
+}
+.unit-icon{
+  padding-top: 10px;
+  padding-left: 10px;
+  width: 70px;
+}
