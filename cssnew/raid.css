@@ -1,0 +1,102 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border-spacing: 0px;
+  padding: 0px;
+}
+table {
+  text-align: center;
+  font-family: 'Antic';
+  font-size:20;
+  border-spacing: 0;
+  font-weight: bold;
+  text-shadow: 3px 3px #778899;
+}
+.main-table {
+  width: 850px;
+}
+
+.title {
+  background-color: #808080;
+  color: black;
+  font-size: 30px;
+  height: 60px;
+}
+.player-title {
+  background-color: #696969;
+	color: black;
+  font-size: 25px;
+}
+.player-name {
+
+}
+.player-current {
+
+}
+.player-last {
+
+}
+.reward-table {
+  width: 100%;
+  background-color: #696969;
+	color: black;
+}
+.rewart-current {
+
+}
+.reward-progress {
+
+}
+.reward-next {
+
+}
+.reward-current-score {
+
+}
+.reward-next-score {
+
+}
+.current-score {
+  text-align: center;
+}
+.footer {
+  text-shadow: 3px 3px black;
+}
+.bk-odd {
+  background-color: gray;
+  text-shadow: 3px 3px #696969;
+	color: black;
+}
+.bk-even {
+  background-color: #A9A9A9;
+  color: black;
+}
+.bk-low {
+  background-color: red;
+  color: white;
+  text-shadow: 3px 3px black;
+}
+.reward-chest {
+  width: 80px;
+  height: 80px;
+}
+.progess-bar {
+  background: #555;
+  border: 1px solid #ccc;
+  width: 600px;
+  height: 20px;
+  margin-top: -1px;
+  border-radius: 6px 6px 6px 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
+  display: flex;
+  justify-content: flex-start;
+}
+.progess-bar-fill {
+  height: 20px;
+  border-radius: 6px 6px 6px 6px;
+  background-color: #2E8B57;
+}

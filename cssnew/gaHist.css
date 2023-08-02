@@ -1,0 +1,204 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table {
+  width: 100%;
+  border: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+.header-player {
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+.header-info {
+  text-align: center;
+  background-color: grey;
+}
+.header-score {
+  text-align: center;
+  background-color: grey;
+}
+.battle-details {
+  position: relative;
+  float: left;
+  width: 20%;
+}
+.battle-result {
+  width: 75%;
+}
+.battle-loss {
+  background-color: #ffb7b7;
+  color: black;
+}
+.battle-win {
+  background-color: green;
+  color: black;
+}
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 20px!important;
+    margin-bottom: -1px;
+}
+
+.squads {
+  position: relative;
+  float: left;
+  width: 35%;
+
+}
+
+.vs {
+  position: relative;
+  width: 10%;
+  float: left;
+  text-align: center;
+  margin-top: 40px;
+}
+.col-md-4 {
+    float: left;
+}
+.col-xs-4 {
+    width: 50%;
+    float: left;
+}
+.text-left {
+    text-align: left
+}
+
+.text-right {
+    text-align: right
+}
+
+.text-center {
+    text-align: center
+}
+.gac-unit {
+    display: inline-flex;
+    vertical-align: top;
+    flex-direction: column;
+    margin-right: 1.5rem;
+}
+.gac-datacron {
+   display: inline-flex;
+   flex: 1;
+   align-self: flex-end;
+   margin-bottom: 0.5rem;
+   padding-top: 20px;
+}
+.gac-unit__bar {
+    background: #555;
+    border: 1px solid #ccc;
+    margin-top: -1px;
+    border-radius: 6px 0 6px 0;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5) inset;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.gac-unit__bar-inner {
+    height: 6px;
+    border-radius: 6px 0 6px 0;
+}
+
+.gac-unit__bar-inner--hp {
+    background-color: #16dc19;
+}
+
+.gac-unit__bar-inner--hp-low {
+    background-color: #fbff44;
+}
+
+.gac-unit__bar-inner--hp-critical {
+    background-color: #de0214;
+}
+
+.gac-unit__bar-inner--prot {
+    background-color: #f2f2f2;
+}
+
+.gac-unit--dead {
+    filter: grayscale(1);
+    opacity: 100;
+}
+
+.gac-unit-portrait--type-1 {
+    padding-top: 13px;
+}
+
+.gac-unit-portrait--type-2 {
+    padding-top: 3px;
+    padding-bottom: 10px;
+}
+
+.gac-summary {
+    position: relative;
+}
+.gac-summary--win {
+    background-color: #d0ecd0;
+    border: 1px solid #7ebf7e;
+}
+.gac-summary--loss,
+.gac-summary--timeout,
+.gac-summary--quit {
+    background-color: #ffb7b7;
+    border: 1px solid #c37a7a;
+}
+
+.gac-summary__status {
+    color: #fff;
+    font-weight: bold;
+    padding: 1px 10px;
+    position: absolute;
+    left: -5px;
+    top: -10px;
+    border-radius: 2px;
+}
+
+.gac-summary__vs {
+    font-weight: bold;
+    margin: 1rem 0;
+}
+
+.gac-summary__status--loss,
+.gac-summary__status--timeout,
+.gac-summary__status--quit {
+    background-color: #860000;
+}
+.gac-summary__status--win {
+    background-color: green;
+}
+.gac-leaders {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.gac-leaders__unit {
+}
+
+.gac-leaders__vs {
+    font-weight: bold;
+    padding: 0 1rem;
+}
+
+.gac-squad {
+    display: flex;
+}
+
+.gac-squad__leader {
+    margin-right: 1rem;
+}
+
+.gac-squad__units {
+    flex: 1;
+}
+
+.gac-squad__reinforcements {
+    margin-top: 1rem;
+}

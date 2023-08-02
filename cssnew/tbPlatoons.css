@@ -4,8 +4,20 @@ body {
   margin: 0;
   padding: 0;
 }
+table, td {
+  border: 0px;
+  padding: 0px;
+  border-style: solid;
+}
 table {
-  border-spacing: 1;
+  font-family: 'Antic';
+  font-size: 16;
+  padding: 1px;
+
+  font-weight: bold;
+}
+.main-table {
+  width: 850px;
 }
 .platoon {
   background-color: white;

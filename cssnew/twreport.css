@@ -25,7 +25,7 @@ table, td {
   font-size: 25px;
 }
 .stat-name {
-
+  padding-left: 10px;
 }
 .section-title {
   text-align: center;

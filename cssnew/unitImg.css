@@ -179,11 +179,11 @@
     text-shadow: -1px -1px 0 #000,2px -1px 0 #000,2px 2px 0 #000,-1px 2px 0 #000
 }
 
-.character-portrait__relic--alignment-1 {
+.character-portrait__relic--alignment-alignment_neutral {
     background-position: 0 -300%
 }
 
-.character-portrait__relic--alignment-3 {
+.character-portrait__relic--alignment-alignment_dark {
     background-position: 0 -100%
 }
 
@@ -193,7 +193,7 @@
     width: 24px;
     height: 24px;
     line-height: 24px;
-    font-size: 10px
+    font-size: 8px
 }
 
 .character-portrait__relic--size-xsmall {
@@ -368,11 +368,11 @@
     transform: translate(-104%,-50%)
 }
 
-.character-portrait__rframe--alignment-3 {
+.character-portrait__rframe--alignment-alignment_dark {
     background-position: 0 50%
 }
 
-.character-portrait__rframe--alignment-1 {
+.character-portrait__rframe--alignment-alignment_neutral {
     background-position: 0 100%
 }
 
@@ -495,8 +495,8 @@
     height: 89px;
     background-image: url(/asset/gear-frame-atlas.png);
     background-size: 100%;
-    left: 50%;
-    top: 50%;
+    left: 52%;
+    top: 53%;
     -webkit-transform: translate(-50%,-50%) scale(.95);
     transform: translate(-50%,-50%) scale(.95)
 }
