@@ -15,8 +15,7 @@ const ASSET_URL = process.env.ASSET_URL
 let imgProxy
 if(ASSET_URL) imgProxy = createProxyMiddleware({
   target: ASSET_URL,
-  secure: false,
-  logLevel: 'debug'
+  secure: false
 })
 const app = express()
 app.set('etag', false);
