@@ -7,16 +7,20 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const compression = require('compression');
 const { createProxyMiddleware } = require('http-proxy-middleware')
+const nocache = require('nocache')
 const ScreenShot = require('./screenShot');
 const Cache = require('./cache')
 const PORT = process.env.PORT || 3000
-const S3_PUBLIC_URL = process.env.S3_PUBLIC_URL
+const ASSET_URL = process.env.ASSET_URL
 let imgProxy
-if(S3_PUBLIC_URL) imgProxy = createProxyMiddleware({
-  target: S3_PUBLIC_URL,
-  secure: false
+if(ASSET_URL) imgProxy = createProxyMiddleware({
+  target: ASSET_URL,
+  secure: false,
+  logLevel: 'debug'
 })
 const app = express()
+app.set('etag', false);
+app.use(nocache());
 const getKey = ()=>{
   try{
     let time = Date.now()
@@ -32,7 +36,7 @@ app.use(bodyParser.json({
   }
 }))
 app.use(compression())
-//app.use('/thumbnail', express.static(path.join(baseDir, 'public', 'thumbnail')))
+
 app.use('/css', express.static(path.join(baseDir, 'css')))
 if(imgProxy){
   app.use('/asset', imgProxy)
