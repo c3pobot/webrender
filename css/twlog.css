@@ -1,0 +1,55 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border-spacing: 0px;
+  padding: 0px;
+}
+table {
+  text-align: center;
+  font-family: 'Antic';
+  font-size:35;
+  border-spacing: 0;
+  font-weight: bold;
+  text-shadow: 3px 3px #778899;
+}
+.log-table {
+  background-color: black;
+  text-align: left;
+  padding: 0px;
+  border: 0px;
+  width: 700px;
+}
+.footer-text {
+  height: 30;
+	font-size: 20;
+  text-shadow: 3px 3px black;
+}
+.squad-name {
+  background-color: #696969;
+  color: black;
+  vertical-align: center;
+  height: 60;
+}
+.battle-even {
+  background-color: #A9A9A9;
+	color: black;
+  text-align: left;
+  height: 40;
+}
+.battle-odd {
+  background-color: gray;
+  text-shadow: 3px 3px #696969;
+	color: black;
+  text-align: left;
+  height: 40;
+}
+.footer {
+  height: 30;
+	font-size: 20;
+  text-shadow: 3px 3px black;
+  text-align: center;
+}
