@@ -4,7 +4,6 @@ const fs = require('fs')
 module.exports = (data = {})=>{
   try{
     if(typeof msg2send != 'object' && typeof msg2send == 'string') data = JSON.parse(data)
-    log.info(`recieved message`)
     if(!data.dir || !data.fileName || !data.file) return
     log.debug(`recieved new image ${data.dir}/${data.fileName}`)
     if(!fs.existsSync(`/app/public/${data.dir}`)) fs.mkdirSync(`/app/public/${data.dir}`, { recursive: true })
