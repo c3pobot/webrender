@@ -6,16 +6,19 @@ COPY package*.json ./
 RUN npm install --omit=dev
 
 FROM node:20-alpine AS app
+LABEL org.opencontainers.image.source https://github.com/c3pobot/webrender
 RUN apk add --no-cache \
       chromium \
       nss \
       freetype \
       harfbuzz \
       ca-certificates \
-      ttf-freefont
+      ttf-freefont \
+      git
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
-RUN mkdir -p /app/cache; mkdir -p /app/public/asset; mkdir -p /app/public/css; mkdir -p /app/public/portrait; mkdir -p /app/public/thumbnail; mkdir -p /app/node_modules && chown -R node:node /app
+RUN mkdir -p /app/cache; mkdir -p /app/node_modules && chown -R node:node /app
+RUN mkdir -p /app/public/asset; mkdir -p /app/public/css; mkdir -p /app/public/portrait; mkdir -p /app/public/thumbnail && chmod 777 -R /app/public
 WORKDIR /app
 
 COPY --from=builder node_modules node_modules/

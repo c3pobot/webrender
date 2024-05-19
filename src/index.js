@@ -1,25 +1,19 @@
 'use strict'
 const log = require('logger')
 let logLevel = process.env.LOG_LEVEL || log.Level.INFO;
-log.setLevel(logLevel);
-const path = require('path')
+log.setLevel('debug');
+
+const PORT = process.env.PORT || 3000
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const compression = require('compression');
-const { createProxyMiddleware } = require('http-proxy-middleware')
-const nocache = require('nocache')
+require('./exchanges')
 const ScreenShot = require('./screenShot');
 const Cache = require('./cache')
-const PORT = process.env.PORT || 3000
-const ASSET_URL = process.env.ASSET_URL
-let imgProxy
-if(ASSET_URL) imgProxy = createProxyMiddleware({
-  target: ASSET_URL,
-  secure: false
-})
+
+
 const app = express()
-app.set('etag', false);
-app.use(nocache());
 const getKey = ()=>{
   try{
     let time = Date.now()
@@ -36,12 +30,10 @@ app.use(bodyParser.json({
 }))
 app.use(compression())
 
-app.use('/css', express.static(path.join(baseDir, 'css')))
-if(imgProxy){
-  app.use('/asset', imgProxy)
-  app.use('/portrait', imgProxy)
-  app.use('/thumbnail', imgProxy)
-}
+app.use('/css', express.static(`${baseDir}/css`))
+app.use('/asset', express.static(`${baseDir}/public/asset`))
+app.use('/portrait', express.static(`${baseDir}/public/portrait`))
+app.use('/thumbnail', express.static(`${baseDir}/public/thumbnail`))
 
 app.post('/web', (req, res)=>{
   handleWebRequest(req, res)
@@ -51,7 +43,7 @@ app.get('/puppeteer', (req, res)=>{
 })
 const handlePuppeteerRequest = async(req, res)=>{
   try{
-    let html = await Cache.get(req?.query?.key)
+    let html = Cache.get(req?.query?.key)
     if(html){
       res.status(200).send(html)
     }else{
@@ -69,7 +61,7 @@ const handleWebRequest = async(req, res)=>{
     if(req?.body?.html){
       let pKey = req.body?.pKey
       if(!pKey) pKey = getKey()
-      if(pKey) await Cache.set(pKey, req.body.html)
+      if(pKey) Cache.set(pKey, req.body.html)
       if(pKey) uri += '?key='+pKey
     }
     let img = await ScreenShot(uri, req?.body?.width, req?.body?.resizeImg)
@@ -85,5 +77,5 @@ const handleWebRequest = async(req, res)=>{
   }
 }
 const server = app.listen(PORT, ()=>{
-  log.info('WebRender Server Listening on '+server.address().port)
+  log.info(`web render server is listening on ${server.address().port}...`)
 })

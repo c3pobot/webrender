@@ -39,15 +39,15 @@ const minimal_args = [
   '--use-gl=swiftshader',
   '--use-mock-keychain'
 ]
-let webBrowser
+let webBrowser, PUPPETEER_DATA_DIR = process.env.PUPPETEER_DATA_DIR || '/app/cache'
 const CreateBrowser = async()=>{
   try{
     const payload = {
       headless: 'new',
       args: minimal_args,
+      userDataDir: PUPPETEER_DATA_DIR,
       defaultViewport: { width: 1000, height: 50 }
     }
-    if(process.env.PUPPETEER_DATA_DIR) payload.userDataDir = process.env.PUPPETEER_DATA_DIR
     webBrowser = await puppeteer.launch(payload)
   }catch(e){
     log.error(e);

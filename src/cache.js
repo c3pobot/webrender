@@ -1,18 +1,16 @@
 'use strict'
 const log = require('logger')
-const Cache = require('node-cache')
-const HTMLCache = new Cache({stdTTL: 60, checkperiod: 60})
-module.exports.set = async(key, value)=>{
-  try{
-    if(key) await HTMLCache.set(key, value)
-  }catch(e){
-    log.error(e);
+//const Cache = require('node-cache')
+//const HTMLCache = new Cache({stdTTL: 60, checkperiod: 60})
+let cache = new Map(), stdTTL = 60000
+module.exports.set = (key, value)=>{
+  if(key){
+    cache.set(key, value)
+    setTimeout(()=>cache.delete(key), stdTTL)
   }
 }
-module.exports.get = async(key)=>{
-  try{
-    if(key) return await HTMLCache.take(key)
-  }catch(e){
-    log.error(e);
-  }
+module.exports.get = (key)=>{
+  let value = cache.get(key)
+  cache.delete(key)
+  return value
 }
