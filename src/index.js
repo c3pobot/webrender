@@ -31,9 +31,9 @@ app.use(bodyParser.json({
 app.use(compression())
 
 app.use('/css', express.static(`${baseDir}/css`))
-app.use('/asset', express.static(`${baseDir}/public/asset`))
-app.use('/portrait', express.static(`${baseDir}/public/portrait`))
-app.use('/thumbnail', express.static(`${baseDir}/public/thumbnail`))
+app.use('/asset', express.static(`${baseDir}/public/data/asset`))
+app.use('/portrait', express.static(`${baseDir}/public/data/portrait`))
+app.use('/thumbnail', express.static(`${baseDir}/public/data/thumbnail`))
 
 app.post('/web', (req, res)=>{
   handleWebRequest(req, res)
