@@ -8,6 +8,7 @@ module.exports = (data = {})=>{
     log.debug(`recieved new image ${data.dir}/${data.fileName}`)
     if(!fs.existsSync(`/app/public/${data.dir}`)) fs.mkdirSync(`/app/public/${data.dir}`, { recursive: true })
     let buff = Buffer.from(data.file, 'base64')
+    
     fs.writeFileSync(`/app/public/${data.dir}/${data.fileName}`, buff)
   }catch(e){
     log.error(e)
