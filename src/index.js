@@ -2,6 +2,7 @@
 const log = require('logger')
 let logLevel = process.env.LOG_LEVEL || log.Level.INFO;
 
+const fs = require('fs')
 
 const PORT = process.env.PORT || 3000
 
@@ -76,6 +77,25 @@ const handleWebRequest = async(req, res)=>{
     res.send(400).json({message: 'Error occured'})
   }
 }
-const server = app.listen(PORT, ()=>{
-  log.info(`web render server is listening on ${server.address().port}...`)
-})
+let server
+/*
+const checkMongo = ()=>{
+  try{
+    let status = mongo.status()
+    if(status){
+      startExpress()
+      return
+    }
+    setTimeout(checkMongo, 5000)
+  }catch(e){
+    log.error(e);
+    setTimeout(checkMongo, 5000)
+  }
+}
+*/
+const startExpress = ()=>{
+  server = app.listen(PORT, ()=>{
+    log.info(`web render server is listening on ${server.address().port}...`)
+  })
+}
+startExpress()
