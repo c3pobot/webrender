@@ -1,0 +1,50 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table, td {
+  border: 0;
+}
+table {
+  font-family: 'Antic';
+  font-size: 16;
+}
+.title {
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 20;
+}
+.playerMet {
+  text-align: center;
+  background-color: green;
+  color: black;
+  font-weight: bold;
+}
+.playerNotMet {
+  text-align: center;
+  background-color: red;
+  color: black;
+  font-weight: bold;
+}
+.unitMet {
+  text-align: center;
+  background-color: green;
+  color: black;
+  font-weight: bold;
+}
+.unitNotMet {
+  text-align: center;
+  background-color: red;
+  color: black;
+  font-weight: bold;
+}
+.unitRarityMetGearNotMet {
+  text-align: center;
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+}
