@@ -1,0 +1,47 @@
+body {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+table {
+  font-family: 'Antic';
+  font-size: 16;
+  border-collapse: collapse;
+}
+
+.title {
+  text-align: left;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 20;
+}
+.footer {
+  text-align: left;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 14;
+}
+.zoneTitle {
+  text-align: left;
+  background-color: grey;
+  color: black;
+  font-weight: bold;
+  font-size: 18;
+}
+.zoneUnitName {
+  text-align: left;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  font-size: 18;
+}
+.zonePlayerName {
+  text-align: left;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  font-size: 18;
+}
