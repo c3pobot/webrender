@@ -45,3 +45,10 @@ table {
   font-weight: bold;
   font-size: 18;
 }
+.zoneNoUnit {
+  text-align: left;
+  background-color: red;
+  color: black;
+  font-weight: bold;
+  font-size: 18;
+}
