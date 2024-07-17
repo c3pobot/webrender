@@ -14,6 +14,10 @@ body {
   background-repeat:no-repeat;
   background-size:cover;
 }
+.score-low {
+  background-color: yellow;
+  color: black;
+}
 .bk-even {
   background-image: url(/asset/stats-dk-bg.png);
   background-repeat:no-repeat;
