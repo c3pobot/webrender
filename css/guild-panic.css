@@ -10,7 +10,7 @@ table {
   border-collapse: collapse;
 }
 table, td {
-  
+
 }
 
 .title {
@@ -22,31 +22,31 @@ table, td {
 }
 .playerMet {
   text-align: center;
-  background-color: green;
+  background-color: #80ff80;
   color: black;
   font-weight: bold;
 }
 .playerNotMet {
   text-align: center;
-  background-color: red;
+  background-color: #ff8080;
   color: black;
   font-weight: bold;
 }
 .unitMet {
   text-align: center;
-  background-color: green;
+  background-color: #80ff80;
   color: black;
   font-weight: bold;
 }
 .unitNotMet {
   text-align: center;
-  background-color: red;
+  background-color: #ff8080;
   color: black;
   font-weight: bold;
 }
 .unitRarityMetGearNotMet {
   text-align: center;
-  background-color: yellow;
+  background-color: #ffff80;
   color: black;
   font-weight: bold;
 }
