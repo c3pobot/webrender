@@ -61,7 +61,7 @@ module.exports = async(uri, browserWidth = 800, resizeImg = false)=>{
       const page = await webBrowser.newPage()
       await page.setViewport({ width: browserWidth, height: 50 })
       await page.goto(uri, { waitUntil: ['networkidle0', 'domcontentloaded'] })
-      let data = await page.screenshot({ fullPage: true, omitBackground: true})
+      let data = await page.screenshot({ fullPage: true, omitBackground: true, encoding: 'base64'})
       await page.close()
       if(data && !data.status && resizeImg) data = await ResizeImg(data)
       return data
