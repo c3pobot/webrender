@@ -45,7 +45,7 @@ const CreateBrowser = async()=>{
     const payload = {
       headless: 'new',
       args: minimal_args,
-      userDataDir: PUPPETEER_DATA_DIR,
+      //userDataDir: PUPPETEER_DATA_DIR,
       defaultViewport: { width: 1000, height: 50 }
     }
     webBrowser = await puppeteer.launch(payload)
@@ -62,7 +62,7 @@ module.exports = async(uri, browserWidth = 800, resizeImg = false)=>{
       await page.setViewport({ width: browserWidth, height: 50 })
       await page.goto(uri, { waitUntil: ['networkidle0', 'domcontentloaded'] })
       let data = await page.screenshot({ fullPage: true, omitBackground: true})
-      page.close()
+      await page.close()
       if(data && !data.status && resizeImg) data = await ResizeImg(data)
       return data
     }
