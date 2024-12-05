@@ -14,6 +14,10 @@ RUN apk add --no-cache \
       harfbuzz \
       ca-certificates \
       ttf-freefont \
+      font-terminus font-inconsolata font-dejavu font-noto font-noto-cjk font-awesome font-noto-extra \
+      font-vollkorn font-misc-cyrillic font-mutt-misc font-screen-cyrillic font-winitzki-cyrillic font-cronyx-cyrillic \
+      font-noto-thai font-noto-tibetan font-ipa font-sony-misc font-jis-misc \
+      font-isas-misc \
       git
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
