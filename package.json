@@ -9,6 +9,11 @@
     "build": "chmod a+x buildtestimage.sh && ./buildtestimage.sh c3pobot/webrender",
     "prod": "chmod a+x buildprodimage.sh && ./buildprodimage.sh c3pobot/webrender"
   },
+  "nodemonConfig": {
+    "ignore": [
+      "/app/public/*"
+    ]
+  },
   "author": "scuba75",
   "license": "ISC",
   "dependencies": {
@@ -20,7 +25,7 @@
     "mongoclient": "github:c3pobot/mongoclient",
     "node-fetch": "^2.6.12",
     "puppeteer": "^23.4.1",
-    "rabbitmq-client": "^4.5.4",
+    "rabbitmq-client": "^5.0.2",
     "sharp": "^0.32.1"
   }
 }

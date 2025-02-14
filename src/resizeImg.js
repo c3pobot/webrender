@@ -1,5 +1,6 @@
 'use strict'
 const sharp = require('sharp');
+/*
 module.exports = (img)=>{
   return new Promise(async(resolve, reject)=>{
     try{
@@ -14,4 +15,17 @@ module.exports = (img)=>{
       reject(e)
     }
   })
+}
+*/
+
+module.exports = async(img)=>{
+  try{
+    let image = await sharp(img)
+    if(!image) return
+    await image.resize(500, null, { withoutEnlargement: true })
+    let data = await image.toBuffer({ resolveWithObject: true })
+    return data?.data?.toString('base64')
+  }catch(e){
+    throw(e)
+  }
 }
