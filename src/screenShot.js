@@ -65,7 +65,8 @@ module.exports = async(uri, browserWidth = 800, resizeImg = false)=>{
       await page.close()
       //if(data && !data.status && resizeImg) data = await ResizeImg(data)
       //return data
-      return await ResizeImg(data)
+      if(resizeImg) return await ResizeImg(data)
+      return Buffer.from(data)?.toString('base64')
 
     }
   }catch(e){
