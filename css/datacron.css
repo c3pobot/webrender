@@ -96,6 +96,7 @@
 .datacron-icon__primaries {
     position: absolute;
     bottom: 0;
+     bottom: var(--datacron-icon--primaries-bottom,0);
     left: 50%;
     z-index: 5;
     -webkit-transform: translate(-50%,-11%);
@@ -103,9 +104,46 @@
     display: grid;
     grid-template-columns: repeat(3,18px);
     grid-column-gap: 5px;
+    grid-column-gap: var(--datacron-icon--primaries-gap,5px);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center
+}
+.datacron-icon__primaries--max-3 {
+  grid-template-columns: repeat(3,8px);
+  --datacron-icon--primary-t2-margin: 30%
+}
+.datacron-icon__primaries--max-5 {
+  grid-template-columns: repeat(5,8px);
+  --datacron-icon--primaries-bottom: 3px;
+  --datacron-icon--primaries-gap: 3px;
+  --datacron-icon--primary-t2-margin: 65%;
+  --datacron-icon--primary-t3-margin: 85%;
+  --datacron-icon--primary-t4-margin: 65%
+}
+.datacron-icon__primary--t-1 {
+    margin-top: 0;
+    margin-top: var(--datacron-icon--primary-t1-margin,0)
+}
+
+.datacron-icon__primary--t-2 {
+    margin-top: 0;
+    margin-top: var(--datacron-icon--primary-t2-margin,0)
+}
+
+.datacron-icon__primary--t-3 {
+    margin-top: 0;
+    margin-top: var(--datacron-icon--primary-t3-margin,0)
+}
+
+.datacron-icon__primary--t-4 {
+    margin-top: 0;
+    margin-top: var(--datacron-icon--primary-t4-margin,0)
+}
+
+.datacron-icon__primary--t-5 {
+    margin-top: 0;
+    margin-top: var(--datacron-icon--primary-t5-margin,0)
 }
 .datacron-icon__primaries--size-sm {
   grid-template-columns: repeat(3,8px);
@@ -124,7 +162,7 @@
   border-width: 1px;
 }
 .datacron-icon__primary--second {
-    margin-top: 6px
+    margin-top: 30%
 }
 
 .datacron-icon__primary--is-active {
