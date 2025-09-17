@@ -50,6 +50,49 @@ table {
 .pull-left {
   float: left !important
 }
+.mod-icon {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  width: 50px;
+  height: 50px
+}
+.mod-icon .mod-icon-img {
+  width: 50px;
+  height: 50px
+}
+.mod-icon-inner {
+  display: block;
+  background: radial-gradient(#aaa, #000 80%);
+  border-radius: 13px 0 13px 7px;
+  overflow: hidden
+}
+.mod-icon-5 {
+  content: "";
+  display: block;
+  background-image: url(/asset/mod-slicing-5.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2
+}
+.mod-icon-6 {
+  content: "";
+  display: block;
+  background-image: url(/asset/mod-slicing-6.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2
+}
 .gear-icon {
   display: inline-block;
   vertical-align: middle;
