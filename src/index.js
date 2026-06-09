@@ -1,28 +1,27 @@
-'use strict'
-const log = require('logger')
-let logLevel = process.env.LOG_LEVEL || log.Level.INFO;
+import log from './logger.js'
 
-const fs = require('fs')
+import express from 'express'
+import bodyParser from 'body-parser'
+import compression from 'compression'
+import { MongoCacheShared } from 'mongo-cache'
+import getAccentSwatchImg from './get_accent_swatch_img.js'
+
+import screenShot from './screen_shot.js'
+import cache from './cache.js'
 
 const PORT = process.env.PORT || 3000
-
-const express = require('express');
-const bodyParser = require('body-parser');
-const compression = require('compression');
-require('./exchange')
-const ScreenShot = require('./screenShot');
-const Cache = require('./cache')
-
+const baseDir = process.env.BASE_DIR || '/app'
+const NAME_SPACE = process.env.NAME_SPACE || 'default'
 
 const app = express()
-const getKey = ()=>{
-  try{
-    let time = Date.now()
-    return 'w-'+time
-  }catch(e){
-    log.error(e);
-  }
-}
+MongoCacheShared.connect('mongodb://mongo-data-rs2.datastore.svc.cluster.local?replicaSet=rs2&ssl=false&compressors=snappy&retryReads=true&retryWrites=true')
+
+export const testCache = new MongoCacheShared.client({
+   db_name: `test_cache_${NAME_SPACE}`
+})
+export const dataCache = new MongoCacheShared.client({
+  db_name: 'game_data'
+})
 app.use(bodyParser.json({
   limit: '1000MB',
   verify: (req, res, buf)=>{
@@ -30,7 +29,6 @@ app.use(bodyParser.json({
   }
 }))
 app.use(compression())
-
 app.use('/css', express.static(`${baseDir}/css`))
 app.use('/asset', express.static(`${baseDir}/public/data/asset`))
 app.use('/portrait', express.static(`${baseDir}/public/data/portrait`))
@@ -42,9 +40,34 @@ app.post('/web', (req, res)=>{
 app.get('/puppeteer', (req, res)=>{
   handlePuppeteerRequest(req, res)
 })
-const handlePuppeteerRequest = async(req, res)=>{
+import getHtml from '/app/html/datacron/index.js'
+app.get('/test', async(req, res)=>{
   try{
-    let html = Cache.get(req?.query?.key)
+    /*
+    let statMap = (await dataCache.get('configMaps', { _id: 'statDefMap' })).data
+    let data = (await testCache.get('data', { _id: 'dc' })).data
+
+    let html = getHtml(data[29].crons, data[30].def, statMap, { userMode: 'light', name: 'Scuba', statsOnly: true })
+    */
+    let html = (await testCache.get('webRender', { _id: 'webRender' } )).html?.replace('dark.css', 'light.css')
+    if(html){
+      res.status(200).send(html)
+    }else{
+      res.sendStatus(400)
+    }
+  }catch(e){
+    log.error(e)
+    res.sendStatus(400)
+  }
+})
+
+function getKey(){
+  return `w_${Date.now()}`
+}
+
+async function handlePuppeteerRequest(req, res){
+  try{
+    let html = cache.get(req?.query?.key)
     if(html){
       res.status(200).send(html)
     }else{
@@ -55,17 +78,18 @@ const handlePuppeteerRequest = async(req, res)=>{
     res.sendStatus(400)
   }
 }
-const handleWebRequest = async(req, res)=>{
+async function handleWebRequest(req, res){
   try{
-    let uri = 'http:/localhost:'+PORT+'/puppeteer'
-    if(req?.body?.uri) uri = req.body.uri
-    if(req?.body?.html){
-      let pKey = req.body?.pKey
-      if(!pKey) pKey = getKey()
-      if(pKey) Cache.set(pKey, req.body.html)
-      if(pKey) uri += '?key='+pKey
+    if(!req?.body) return res.status(400).json({ status: 400, message: 'you did not provide corrent information' })
+    const { uri, html, pKey, width, resizeImg } = req.body
+    let reqUri = uri || `http://localhost:${PORT}/puppeteer`
+
+    if(html){
+      let key = pKey || `w_${Date.now()}`
+      cache.set(key, html)
+      reqUri += `?key=${key}`
     }
-    let img = await ScreenShot(uri, req?.body?.width, req?.body?.resizeImg)
+    let img = await screenShot(reqUri, width, resizeImg)
     if(img){
       res.set('Content-Type', 'image/png')
       res.status(200).send(img)
@@ -74,28 +98,9 @@ const handleWebRequest = async(req, res)=>{
     }
   }catch(e){
     log.error(e);
-    res.send(400).json({message: 'Error occured'})
+    res.status(400).json({status: 400, message: 'Error occured'})
   }
 }
-let server
-/*
-const checkMongo = ()=>{
-  try{
-    let status = mongo.status()
-    if(status){
-      startExpress()
-      return
-    }
-    setTimeout(checkMongo, 5000)
-  }catch(e){
-    log.error(e);
-    setTimeout(checkMongo, 5000)
-  }
-}
-*/
-const startExpress = ()=>{
-  server = app.listen(PORT, ()=>{
+const server = app.listen(PORT, ()=>{
     log.info(`web render server is listening on ${server.address().port}...`)
   })
-}
-startExpress()

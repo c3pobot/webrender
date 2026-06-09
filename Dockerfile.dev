@@ -1,12 +1,12 @@
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 COPY package*.json ./
 # don't install dev dependencies for the docker image
 RUN npm install --omit=dev
 
-FROM node:20-alpine AS app
-LABEL org.opencontainers.image.source https://github.com/c3pobot/webrender
+FROM node:22-alpine AS app
+LABEL org.opencontainers.image.source=https://github.com/c3pobot/webrender
 RUN apk add --no-cache \
       chromium \
       nss \
@@ -28,12 +28,12 @@ WORKDIR /app
 COPY --from=builder node_modules node_modules/
 COPY . .
 
-RUN apk update && \
+#RUN apk update && \
   # wrap process in --init in order to handle kernel signals
   # https://github.com/krallin/tini#using-tini
-  apk add --no-cache tini && \
-  rm -rf /var/cache/apk/*
+  #apk add --no-cache tini && \
+  #rm -rf /var/cache/apk/*
 RUN npm install -g nodemon
 USER node
-ENTRYPOINT ["/sbin/tini", "--"]
+#ENTRYPOINT ["/sbin/tini", "--"]
 CMD [ "nodemon", "--trace-warnings", "./index.js"  ]

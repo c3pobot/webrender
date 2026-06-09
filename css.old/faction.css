@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  color: var(--text);
+  color: white;
   margin: 0;
   padding: 0;
 }
@@ -14,10 +14,11 @@ table {
   font-family: 'Antic';
   font-size: 16;
   border-spacing: 0;
-  text-shadow: 3px 3px var(--text-shadow);
+  text-shadow: 3px 3px black;
 }
 .player-name {
-	background-color: var(--header);
+	background-image: url(/asset/stats-title-bg.png);
+	color: white;
 	text-align: center;
 	vertical-align: top;
 }
@@ -26,10 +27,14 @@ table {
   font-weight: bold;
 }
 .unit-even {
-  background-color: var(--bg-2);
+  background-image: url(/asset/stats-lt-bg.png);
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 .unit-odd {
-  background-color: var(--bg-1);
+  background-image: url(/asset/stats-dk-bg.png);
+  background-repeat:no-repeat;
+  background-size:cover;
 }
 .unit-name {
   text-align: center;

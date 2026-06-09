@@ -1,12 +1,12 @@
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true \
     PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium-browser
 COPY package*.json ./
 # don't install dev dependencies for the docker image
 RUN npm install --omit=dev
 
-FROM node:20-alpine AS app
-LABEL org.opencontainers.image.source https://github.com/c3pobot/webrender
+FROM node:22-alpine AS app
+LABEL org.opencontainers.image.source=https://github.com/c3pobot/webrender
 RUN apk add --no-cache \
       chromium \
       nss \

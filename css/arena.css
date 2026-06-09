@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  color: white;
+  color: var(--text);
   margin: 0;
   padding: 0;
 }

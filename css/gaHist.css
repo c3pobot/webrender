@@ -1,6 +1,6 @@
 body {
   background-color: black;
-  color: white;
+  color: var(--text);
   margin: 0;
   padding: 0;
 }
@@ -8,8 +8,12 @@ table {
   width: 100%;
   border: 0;
   padding: 0;
+  text-shadow: 3px 3px var(--text-shadow);
+  font-size: 20;
+  font-weight: bold;
   border-collapse: collapse;
 }
+
 .header-player {
   text-align: center;
   background-color: white;

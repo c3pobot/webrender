@@ -7,27 +7,22 @@
   text-align: left;
 }
 .datacron-header {
-  background-color: #660033;
-  text-align: center;
-}
-.datacron-footer {
-  background: white;
-  color: black;
+  background-color: var(--header);
+  height: 30px;
   text-align: center;
 }
 .datacron-row-even {
-  background-color: #282828;
-  color: black;
+  background-color: var(--bg-2);
 }
 .datacron-row-odd {
-
+  background-color: var(--bg-1);
 }
 .datacron-icon__icon {
     position: relative
 }
 .datacron-icon__icon--size-sm{
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
 }
 .datacron-icon__callout-affix {
     background: 0 0 transparent url(/asset/datacron-ring-thin-bg.png) no-repeat;
@@ -40,8 +35,8 @@
     z-index: 5
 }
 .datacron-icon__callout-affix--size-sm {
-  width: 24px;
-  height: 24px;
+  width: 40px;
+  height: 40px;
 }
 .datacron-icon__callout-affix-img {
     display: block;

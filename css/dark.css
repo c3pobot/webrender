@@ -1,0 +1,13 @@
+:root {
+  --bg-0: #111317;
+  --bg-1: #161a1f;
+  --bg-2: #1b2128;
+  --header: #2a313b;
+  --text: #e6e8ec;
+  --text-dim: #c1c7d0;
+  --text-shadow: #000000;
+  --border: rgba(255, 255, 255, 0.06);
+  --gradient-1: rgba(40, 44, 52, 0.6);
+  --gradient-2: rgba(30, 34, 40, 0.5);
+  --gradient-3: rgba(20, 24, 28, 0.45);
+}

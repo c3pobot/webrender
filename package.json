@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "express and puppeteer server for c3po bot",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "update": "chmod a+x updategitdependency.sh && ./updategitdependency.sh",
@@ -11,21 +12,21 @@
   },
   "nodemonConfig": {
     "ignore": [
-      "/app/public/*"
+      "/app/public/*",
+      "/app/cache/*"
     ]
   },
   "author": "scuba75",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.2",
-    "compression": "^1.7.4",
-    "express": "^4.18.2",
+    "body-parser": "^2.2.2",
+    "compression": "^1.8.1",
+    "express": "^5.2.1",
     "join-images": "^1.1.5",
-    "logger": "github:c3pobot/logger",
-    "mongoclient": "github:c3pobot/mongoclient",
-    "node-fetch": "^2.6.12",
-    "puppeteer": "^23.4.1",
+    "json-array-sorter": "^0.0.5",
+    "mongo-cache": "github:c3pobot/mongo-cache",
+    "puppeteer": "^25.0.4",
     "rabbitmq-client": "^5.0.2",
-    "sharp": "^0.32.1"
+    "sharp": "^0.32.0"
   }
 }

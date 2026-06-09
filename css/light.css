@@ -1,0 +1,17 @@
+:root {
+  /*--bg-0: #f3f4f6;*/
+  --bg-0: #dfe5f2;
+  /*--bg-1: #e9ebee;*/
+  --bg-1: #c3c5c7;
+  /*--bg-2: #dde1e6;*/
+  --bg-2: #c7cbd1;
+  /*--header: #cfd5dc;*/
+  --header: #bdc3c9;
+  --text: #2f343a;
+  --text-dim: #5f6873;
+  --text-shadow: white;
+  --border: rgba(0, 0, 0, 0.08);
+  --gradient-1: rgba(220, 224, 229, 0.75);
+  --gradient-2: rgba(210, 215, 221, 0.65);
+  --gradient-3: rgba(195, 201, 208, 0.55);
+}
